@@ -1,0 +1,7 @@
+{
+  "name": "BreatheIN",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

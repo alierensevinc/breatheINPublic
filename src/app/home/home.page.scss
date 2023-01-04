@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+ion-content {
+  --background: linear-gradient(#076585, #fff);
+
+}
+
+.main-container {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    transform: scale(0.6);
+
+    .circle {
+      background-color: #cff2fa;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      z-index: -1;
+    }
+
+    h1 {
+      color: #000000;
+      letter-spacing: 1px;
+    }
+
+    .gradient-circle {
+      background: conic-gradient(
+                      #12c2e9 0%,
+                      #88e0f4 33%,
+                      #88f4d2 33%,
+                      #12e9a5 50%,
+                      #88f4d2 66%,
+                      #f9959b 66%,
+                      #f64f59 100%
+      );
+      height: 320px;
+      width: 320px;
+      z-index: -2;
+      border-radius: 50%;
+      position: absolute;
+      left: -10px;
+    }
+
+    .pointer-container {
+      position: absolute;
+      height: 200px;
+      top: -50px;
+      animation: rotate 12s linear forwards infinite;
+      transform-origin: bottom center;
+    }
+
+    .pointer {
+      background-color: #fff;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      display: block;
+    }
+  }
+
+  .container.grow {
+    animation: grow 4s linear forwards;
+  }
+
+  .container.shrink {
+    animation: shrink 4s linear forwards;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(0.6);
+  }
+}
